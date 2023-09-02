@@ -1,0 +1,112 @@
+.best-seller {
+  display: flex;
+  gap: 20px;
+}
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+.best-seller-img {
+  background-color: var(--second-color);
+  border-radius: 3px;
+  height: 370px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.kfc-box {
+  display: flex;
+  gap: 7px;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%);
+  z-index: 9;
+}
+.best-seller-img h6 {
+  color: var(--white);
+  cursor: pointer;
+  font-size: 30px;
+}
+.kfc-box span {
+  background-color: var(--light-mode) !important;
+  border-radius: 0 0 1px 1px;
+  height: 22px;
+  width: 15px;
+}
+.bestseller-container {
+  border-radius: 10px 10px 0 10px;
+  cursor: pointer;
+  width: 100%;
+}
+.rs-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+}
+.pkr-title {
+  font-weight: 800;
+  margin-right: 7px;
+  color: var(--white);
+}
+.wdp-ribbon {
+  background-color: #ea002a !important;
+  border-radius: 0.25em;
+  color: #fff;
+  display: inline-block;
+  font-weight: 800;
+  height: 28px;
+  line-height: 24px;
+  padding: 2px 15px;
+  text-align: center;
+  width: 80px;
+}
+.wdp-ribbon-two:before {
+  border-color: #ea002a;
+  border-left-color: transparent !important;
+  left: -9px;
+}
+.card-text {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 19px;
+  max-height: 58px;
+  min-height: 40px;
+  margin-top: 10px;
+  color: var(--white);
+}
+.h-420 {
+  height: 450px !important;
+}
+.price-label {
+  bottom: -35px;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.price-label button {
+  border: none;
+  font-size: 13px;
+  padding: 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.rgeister-btn {
+  align-items: center;
+  background-color: #ea002a;
+  border-radius: 6px;
+  color: #fff !important;
+  display: flex;
+  font-weight: 600;
+  margin: 0;
+  padding: 8px 10px;
+  text-decoration: none;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.rgeister-btn:hover {
+  background-color: #fff;
+  border: 1px solid #ea002a;
+  color: #ea002a !important;
+  font-weight: 600;
+}

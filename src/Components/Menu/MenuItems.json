@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "About US",
+    "route": "/about-us"
+  },
+  {
+    "id": 2,
+    "title": "Feedback",
+    "route": "/feedback"
+  },
+  {
+    "id": 3,
+    "title": "Terms & Condition",
+    "route": "/terms"
+  },
+  {
+    "id": 4,
+    "title": "Privacy & Policy",
+    "route": "/privacy-policy"
+  },
+  {
+    "id": 5,
+    "title": "Contact Us",
+    "route": "/contact-us"
+  }
+]

@@ -1,0 +1,13 @@
+.category-wrapepr {
+  display: flex;
+}
+#category .best-seller-img {
+  width: 31.6%;
+}
+#category {
+  margin: 20px 0px;
+}
+#basket {
+  margin-top: 87px;
+  margin-left: 20px;
+}

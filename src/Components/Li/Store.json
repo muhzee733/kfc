@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Store Location",
+    "image": "https://www.kfcpakistan.com/static/media/Store-Locator.f6a5770e5b27f36c215d.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Order Track",
+    "image": "https://www.kfcpakistan.com/static/media/Tracking-order.4b97000517b60dac1935.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Explore Menu",
+    "image": "https://www.kfcpakistan.com/static/media/Explore-menu.5a4a8ea8405b961694cb.jpg"
+  }
+]

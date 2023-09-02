@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Raleway Semibold";
+  src: url("./Fonts/Raleway/static/Raleway-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Raleway Bold";
+  src: url("./Fonts/Raleway/static/Raleway-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "National";
+  src: url("./Fonts/National/National\ 2\ Condensed.ttf") format("truetype");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Raleway Bold", sans-serif;
+  color: var(--white);
+}
+h2,
+h6 {
+  font-family: "National", sans-serif;
+}
+.position-relative {
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+:root {
+  --black: #000;
+  --second-color: #1c1816;
+  --white: #fff;
+  --header-color: #000;
+  --border-color: #000;
+  --light-theme: #1c1816;
+  --border-theme: #1c1816;
+  --footer-theme: #1c1816;
+  --footer-color: #fff;
+  --dark-mode: #000;
+  --light-mode: #ea002a;
+  --bg: #a3a3a3;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.mt-5 {
+  margin-top: 20px;
+}
+.p-1 {
+  padding: 10px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+.d-flex {
   display: flex;
-  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.align-center {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.justify-content-center {
+  justify-content: space-between;
+}
+.align-center-top {
+  align-items: top;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 7px 24px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  background-color: var(--light-theme);
+  border: 2px solid var(--light-mode);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  margin: 0px 5px;
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn2 {
+  background-color: var(--light-theme);
+  padding: 7px 24px;
+  font-weight: 700;
+  transition: all 0.3s;
+  border: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+span {
+  color: var(--white);
 }

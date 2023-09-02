@@ -1,0 +1,55 @@
+.main-header {
+  width: 100%;
+  z-index: 99;
+}
+.header-color {
+  background-color: var(--header-color);
+}
+.header-wrapper {
+  /* flex-wrap: nowrap;
+  justify-content: flex-start;
+  display: flex; */
+  padding: 35px 0px;
+}
+
+.left-box svg {
+  color: var(--white);
+  font-size: 32px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.delivery {
+  border-radius: 5px;
+  height: 25px;
+  padding: 0;
+  margin-right: 7px;
+}
+.order-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 5px;
+}
+.kfc-logo {
+  margin-right: 10px;
+}
+.login {
+  background: var(--light-mode);
+  padding: 7px 10px;
+}
+.fly-cart-btn {
+  align-items: center;
+  background-image: url(/src//Images//basket.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: black;
+  border: none;
+  bottom: -15px;
+  color: #000;
+  height: 50px;
+  justify-content: center;
+  margin-right: 10px;
+  margin-top: 15px;
+  padding: 0;
+  right: 20px;
+  width: 45px;
+}

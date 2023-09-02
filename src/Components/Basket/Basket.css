@@ -1,0 +1,47 @@
+.basket-conainet-sticky {
+  background-color: #1c1816;
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 5rem;
+  position: -webkit-sticky;
+  width: 100%;
+}
+.basket-items {
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  max-height: 100%;
+}
+.item-add {
+  background-color: #1c1816;
+  border-bottom: 2px solid #ea002a;
+  border-radius: 7px 7px 0 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.add-to-basket {
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 1rem;
+}
+.kfc-basket {
+  align-items: center;
+  background-color: #1c1816;
+  border-radius: 10px;
+  box-shadow: 0 34.5333px 103.6px -8.63333px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-basis: 47.8%;
+  flex-direction: column;
+  height: fit-content;
+  max-height: 37rem;
+  overflow: hidden;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-inline: 10px;
+  text-align: center;
+}

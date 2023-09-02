@@ -1,0 +1,52 @@
+.browse-container {
+  margin-top: 50px;
+}
+.explorSection {
+  background-color: var(--black);
+}
+.browser-design {
+  background-color: var(--second-color);
+  border-radius: 50% 50% 3% 50%;
+  cursor: pointer;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  margin-top: 30px;
+  position: relative;
+  transition: all 0.4s;
+  width: 100%;
+}
+.brows-items {
+  margin-top: 35px;
+}
+.browser-design img {
+  border-radius: 10px;
+  margin: -40px auto 0;
+  transition: all 0.3s;
+  width: 180px;
+}
+.browser-design h6 {
+  color: var(--white);
+  position: relative;
+  text-align: center;
+}
+.details-design:before {
+  border: 2px solid var(--light-mode);
+  border-radius: 5px;
+  bottom: -15px;
+  content: "";
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 50px;
+}
+.browser-design span {
+  background-color: var(--black);
+  border-radius: 50%;
+  bottom: 5px;
+  height: 17px;
+  position: absolute;
+  right: 5px;
+  width: 17px;
+}

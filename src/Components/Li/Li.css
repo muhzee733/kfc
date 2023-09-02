@@ -1,0 +1,11 @@
+.header-list {
+  margin-top: 30px;
+  border-top: 1px solid var(--white);
+  padding-top: 20px;
+}
+.header-list img {
+  margin-right: 10px;
+}
+.header-list li:hover {
+  background-color: var(--bg);
+}

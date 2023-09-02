@@ -1,0 +1,21 @@
+.items-title {
+  font-weight: 600;
+  padding-top: 40px;
+  position: relative;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+.items-title:before {
+  background-color: var(--light-mode) !important;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 60px;
+}
+.items-title span {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
