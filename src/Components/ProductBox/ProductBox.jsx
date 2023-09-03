@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import "./ProductBox.css";
 import Button from "../Buttons/Button";
-
-import Popup from "../ProductPopup/Popup";
+import Popup from "../Popup/Popup";
 const ProductBox = ({ item, index, descActive }) => {
+  const [showPopup, setShowPopup] = useState(false);
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
   return (
     <>
       <div
         className={`best-seller-img  ${descActive ? "h-420" : ""}`}
         key={index}
       >
-        <div
-          className="kfc-box"
-          data-toggle="modal"
-          data-target={`#${item.id}`}
-        >
+        <div className="kfc-box ">
           <span></span>
           <span></span>
           <span></span>
@@ -22,6 +21,7 @@ const ProductBox = ({ item, index, descActive }) => {
 
         <div className="image-wrapper w-100">
           <img
+            onClick={togglePopup}
             className="bestseller-container"
             src={item?.prod_image}
             alt={item.prod_title}
@@ -59,7 +59,7 @@ const ProductBox = ({ item, index, descActive }) => {
           </div>
         ) : null}
       </div>{" "}
-      <Popup item={item} id={item.id} />
+      {showPopup && <Popup item={item} onClose={togglePopup} />}
     </>
   );
 };

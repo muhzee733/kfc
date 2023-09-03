@@ -108,6 +108,7 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
-span {
+span,
+h3 {
   color: var(--white);
 }

@@ -14,8 +14,6 @@ import Login from "./Components/Login/Login";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import Menu from "./Pages/Menu/Menu";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const App = () => {
   return (

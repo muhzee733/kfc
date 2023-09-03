@@ -21,11 +21,23 @@ const Basket = () => {
   const handleRemove = (item) => {
     dispatch(removeProduct(item));
   };
+  const totalCartValue = cartItems.reduce((accumulator, currentItem) => {
+    return accumulator + currentItem.total_price;
+  }, 0);
   return (
     <div className="basket-conainet-sticky">
       <div className="basket-items">
         <div className="item-add">
-          <h3>Order Details</h3>
+          <h3>Order Details</h3>{" "}
+          {cartItems.length > 0 ? (
+            <>
+              <span>
+                {cartItems.length} Items | RS: {totalCartValue}
+              </span>{" "}
+            </>
+          ) : (
+            ""
+          )}
         </div>
         <div className="main_cart">
           {cartItems.length > 0 ? (
