@@ -105,7 +105,7 @@
   cursor: pointer;
 }
 .rgeister-btn:hover {
-  background-color: #fff;
+  background-color: var(--black);
   border: 1px solid #ea002a;
   color: #ea002a !important;
   font-weight: 600;

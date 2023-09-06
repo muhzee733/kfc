@@ -1,17 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Popup.css";
-import { useDispatch } from "react-redux";
-import { increaseQuantity, decreaseQuantity } from "../../Redux/Slices/Cart";
+import Button from "../Buttons/Button";
 
 const Popup = ({ item, onClose }) => {
-  const dispatch = useDispatch();
-  const handleIncreaseQuantity = (item) => {
-    dispatch(increaseQuantity(item));
+  const [selectedDrinks, setSelectedDrinks] = useState([]);
+  const [quantity, setQuantity] = useState(item.qty || 1);
+
+  const checkBoxExtra = (e) => {
+    let checkValue = e.target.defaultValue;
+    let check_value_state = selectedDrinks.some(
+      (items) => items.extraDrink_name === checkValue
+    );
+    if (check_value_state) {
+      setSelectedDrinks(
+        selectedDrinks.filter((drink) => drink.extraDrink_name !== checkValue)
+      );
+    } else {
+      setSelectedDrinks([
+        ...selectedDrinks,
+        { extraDrink_name: checkValue, price: 100 },
+      ]);
+    }
   };
 
-  const handleDecreaseQuantity = (item) => {
-    dispatch(decreaseQuantity(item));
+  let increment = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
   };
+  let decrement = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
+
+  let totalPrice = item.prod_price * quantity;
+
   return (
     <div className="full-page-popup">
       <div className="popup-content">
@@ -20,24 +42,27 @@ const Popup = ({ item, onClose }) => {
         </span>
         <div className="d-flex align-items-center">
           <div style={{ flex: "1" }}>
-            <div>
-              <h4>Add a soft drink (Optional)</h4>{" "}
-              <ul>
-                <li>
-                  1. Pepsi Regular ( Rs. 100)<span className="btnn">ADD</span>
-                </li>
-                <li>
-                  2. 7UP Regular ( Rs. 100)<span className="btnn">ADD</span>
-                </li>
-                <li>
-                  3. Mirinda Regular( Rs. 100) <span className="btnn">ADD</span>
-                </li>
-                <li>
-                  4. Mountain Dew Regular ( Rs. 100){" "}
-                  <span className="btnn">ADD</span>
-                </li>
-              </ul>
-            </div>
+            <h5 style={{ marginBottom: "20px" }}>
+              Add a soft drink (Optional)
+            </h5>
+            <ul className="d-flex extra">
+              {item.drink.map((product, index) => {
+                return (
+                  <>
+                    <div>
+                      <input
+                        style={{ marginRight: "15px" }}
+                        type="checkbox"
+                        id={`drink-${index}`}
+                        value={product}
+                        onChange={(e) => checkBoxExtra(e)}
+                      />
+                      <label htmlFor={`drink-${index}`}>{product}</label>
+                    </div>
+                  </>
+                );
+              })}
+            </ul>
           </div>
           <div className="items-prices">
             <div className="item-img">
@@ -48,13 +73,20 @@ const Popup = ({ item, onClose }) => {
               <h2>{item.prod_title}</h2>
               <p>{item?.prod_desc.slice(0, 35)}</p>{" "}
               <div className="menu-add-more">
-                <button onClick={() => handleDecreaseQuantity(item)}>-</button>
-                <span className="cont-item">1</span>
-                <button onClick={() => handleIncreaseQuantity(item)}>+</button>
+                <button onClick={increment}>+</button>
+                <span className="cont-item">{quantity}</span>
+                <button onClick={decrement}>-</button>
               </div>{" "}
               <div className="motal-cart-btn">
-                <span>Total Price: </span>
+                <span>Price: {totalPrice} </span>
               </div>
+              <Button
+                items={item}
+                text="Add to bucket"
+                btn="ri-add-line rgeister-btn"
+                selectedDrinks={selectedDrinks}
+                quantity={quantity}
+              />
             </div>
           </div>
         </div>

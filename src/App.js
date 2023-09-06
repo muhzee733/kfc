@@ -14,6 +14,7 @@ import Login from "./Components/Login/Login";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import Menu from "./Pages/Menu/Menu";
+import Checkout from "./Pages/CheckOut/Checkout";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/feedback" element={<FeedBack />} />
           <Route path="/login" element={<Login />} />
           <Route path="/menu/:id" element={<Menu />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
         <ToastContainer />

@@ -82,6 +82,13 @@ a {
   align-items: top;
 }
 
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+
 .btn {
   border-radius: 5px;
   font-weight: 700;
@@ -102,7 +109,7 @@ a {
   font-weight: 700;
   transition: all 0.3s;
   border: none;
-  color: var(--white);
+  color: var(--dark-mode);
   display: flex;
   align-items: center;
   border-radius: 5px;

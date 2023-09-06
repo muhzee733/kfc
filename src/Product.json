@@ -6,6 +6,12 @@
     "prod_desc": "3 pieces of Hot and Crispy Fried Chicken",
     "prod_price": 620,
     "qty": 1,
+    "drink": [
+      "Pepsi Regular (Rs. 100)",
+      "7 Up Regular (Rs. 100)",
+      "Mirinda Regular (Rs. 100)",
+      "4. Mountain Dew Regular (Rs. 100)"
+    ],
     "prod_image": "https://www.kfcpakistan.com/images/43aa4970-ffaa-11ed-9c55-3705f003c528-3pc-Chikcen_variant_0-2023-05-31115706.png"
   },
   {

@@ -10,6 +10,7 @@ export const cartSlice = createSlice({
       state.items.push({
         ...action.payload,
         total_price: action.payload.prod_price * action.payload.qty,
+        extra_drink: action.payload.selectedDrinks,
       });
     },
     increaseQuantity: (state, action) => {
