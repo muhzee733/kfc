@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 const Button = ({
   logo,
-  text,
   alt,
   className,
   order,
@@ -24,13 +23,14 @@ const Button = ({
     if (filterCart) {
       toast.warning("Item Already In Cart");
     } else {
-      dispatch(
-        addToCart({
-          ...item,
-          qty: quantity,
-          selectedDrinks: selectedDrinks,
-        })
-      );
+      let add_to_cart = {
+        ...item,
+        selectedDrinks: selectedDrinks,
+      };
+      if (quantity) {
+        add_to_cart.qty = quantity;
+      }
+      dispatch(addToCart(add_to_cart));
       setTextButton(true);
       toast.success("Item added to cart!");
     }

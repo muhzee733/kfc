@@ -39,34 +39,15 @@ const Header = () => {
                 isSidebarOpen={isSidebarOpen}
                 closeSidebar={closeSidebar}
               />
-              <Button
-                logo={delivery}
-                text="Delivery"
-                alt="delivery"
-                className="delivery"
-                order="order"
-                btn="btn"
-              />
-              <Button
-                logo={Pickup}
-                text="PickUp"
-                alt="PickUp"
-                className="delivery"
-                order="order"
-                btn="btn2"
-              />
+              <button className="  btn ">Delivery</button>
+              <button className="  btn">Pickup</button>
             </div>
             <div className="right-box d-flex align-items-center">
               <button className="fly-cart-btn d-flex" onClick={showHandle}>
                 {count.length}
               </button>
               {openCart ? <CartMenu setOpenCart={setOpenCart} /> : ""}
-              <Button
-                text="Login"
-                className="delivery "
-                order="order "
-                btn="btn login"
-              />
+              <button className="  btn">Login</button>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./CartMenu.css";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import {
   increaseQuantity,
   decreaseQuantity,
@@ -11,6 +12,7 @@ import MiniCart from "./MiniCart";
 const CartMenu = ({ setOpenCart }) => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleIncreaseQuantity = (item) => {
     dispatch(increaseQuantity(item));
   };
@@ -54,6 +56,17 @@ const CartMenu = ({ setOpenCart }) => {
             </div>
           ) : (
             "No Product Into Cart!"
+          )}
+          {cartItems.length > 0 ? (
+            <button
+              className="btn"
+              style={{ marginTop: "20px", cursor: "pointer" }}
+              onClick={() => navigate("/checkout")}
+            >
+              Checkout
+            </button>
+          ) : (
+            ""
           )}
         </div>
       </div>
